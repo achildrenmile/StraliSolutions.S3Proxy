@@ -1,0 +1,15 @@
+@startuml S3Proxy
+
+
+node "com.philips.ka.s3proxy" {
+  node server.js { 
+    component "httpServer" 
+    component "AWS-SDK S3"
+    component "Node-Config"
+    component "log4js"
+  }
+
+} 
+
+
+@enduml

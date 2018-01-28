@@ -1,0 +1,27 @@
+{
+  "name": "com.philips.ka.s3proxy",
+  "dscription": "S3 Proxy",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "author": "Michael Linder",
+  "engines": {
+    "node": "6.11.3",
+    "npm": "3.10.10"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.145.0",
+    "config": "^1.27.0",
+    "log4js": "^2.3.11"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "Proxy package for S3 ressources",
+  "main": ".eslintrc.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/hsdp/oneka-proxy.git"
+  },
+  "homepage": "https://bitbucket.org/hsdp/oneka-proxy#readme"
+}

@@ -1,0 +1,47 @@
+@startuml OneKAPlatformWithProxy
+node "OneKA/NutriU Frontends" {
+node "Android Device" {
+  component [OneKA Android App] as Android
+}
+
+node "iOS Device" {
+  component [OneKA iOS App] as iOS
+}
+
+node  "Browser" {
+  component [OneKA Admin UI] as AdminUI
+}
+}
+node "RestOfTheInternet" {
+component Facebook {
+}
+component Twitter{
+}
+component etc. {
+}
+
+}
+cloud Internet {
+}
+
+node "HSDP Cloud Environment" {
+  interface "OneKA API" as API
+  [OneKA Platform] as Platform  
+  database S3 
+  interface "OneKA Proxy" as API_AWS
+
+} 
+
+Android -up-> Internet
+iOS -up-> Internet
+AdminUI -up-> Internet
+Internet -up-> API
+Internet "public read for pictures" -down-> API_AWS
+API_AWS "private access to S3" )--> S3
+Platform -left-( API
+S3 "create/update/delete recipe picture authenticated via API" <-down-  Platform
+
+Twitter  -up->  Internet
+Facebook  -up-> Internet
+etc. -up-> Internet
+@enduml

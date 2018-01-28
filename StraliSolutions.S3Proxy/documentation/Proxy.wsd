@@ -1,0 +1,24 @@
+@startuml S3Proxy
+
+
+cloud Internet {
+}
+
+node "HSDP Cloud Environment" {
+  database S3 
+  component "S3 Proxy" as API_AWS
+
+} 
+
+Internet  -up->  API_AWS
+API_AWS  -up-> "private req" S3
+
+
+Consumer -up-> "public req" Internet
+
+Internet  <-up- API_AWS
+API_AWS  <-up- "private res" S3
+
+
+Consumer <-up- "public res" Internet
+@enduml
