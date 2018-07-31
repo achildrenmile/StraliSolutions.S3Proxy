@@ -1,8 +1,8 @@
 {
-  "name": "com.philips.ka.s3proxy",
+  "name": "StraliSolutions.S3Proxy",
   "dscription": "S3 Proxy",
   "version": "1.0.0",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "Michael Linder",
   "engines": {
     "node": "6.11.3",
