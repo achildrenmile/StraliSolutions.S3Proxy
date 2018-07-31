@@ -21,7 +21,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/hsdp/oneka-proxy.git"
+    "url": ""
   },
-  "homepage": "https://bitbucket.org/hsdp/oneka-proxy#readme"
+  "homepage": ""
 }
